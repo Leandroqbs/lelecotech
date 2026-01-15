@@ -10,9 +10,9 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "homepage": "https://Leandroqbs.github.io/lelecotech"
   },
-  "homepage": "https://Leandroqbs.github.io/lelecotech",
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
     "@radix-ui/react-accordion": "^1.2.11",
