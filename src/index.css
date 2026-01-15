@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 217 33% 17%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 187 100% 42%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 48 96% 53%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 25%;
+    --input: 217 33% 25%;
+    --ring: 187 100% 42%;
+
+    --radius: 0.75rem;
+
+    /* Custom colors */
+    --whatsapp: 142 70% 45%;
+    --whatsapp-foreground: 0 0% 100%;
+    --telegram: 200 100% 50%;
+    --telegram-foreground: 0 0% 100%;
+    --cyan: 187 100% 42%;
+    --yellow: 48 96% 53%;
+    --slate-900: 222 47% 11%;
+    --slate-800: 217 33% 17%;
+    --slate-700: 215 25% 27%;
+    --slate-400: 215 20% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+}
+
+@layer utilities {
+  .gradient-bg {
+    background: linear-gradient(
+      to bottom,
+      hsl(var(--slate-900)),
+      hsl(var(--slate-800)),
+      hsl(var(--slate-900))
+    );
+  }
+
+  .text-gradient-cyan {
+    @apply bg-gradient-to-r from-cyan-400 to-cyan-300 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-yellow {
+    @apply bg-gradient-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent;
+  }
+
+  .card-glow {
+    @apply border border-slate-700/50 bg-slate-800/50 backdrop-blur-sm;
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.05);
+  }
+
+  .card-glow:hover {
+    box-shadow: 0 0 30px rgba(6, 182, 212, 0.1);
+  }
+}
